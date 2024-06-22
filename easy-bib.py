@@ -20,7 +20,7 @@ def build_bib(mode='normal'):
     
     ref_key_dict = {}
     for i in range(conference.shape[0]):
-        print i
+        print(i)
 
         ref_key = build_ref_key(conference.loc[i])
         if ref_key in ref_key_dict:
@@ -84,7 +84,7 @@ def build_bib(mode='normal'):
 
     journal = pd.read_csv('journal.txt', sep='$')
     for i in range(journal.shape[0]):
-        print i
+        print(i)
 
         ref_key = build_ref_key(journal.loc[i])
         if ref_key in ref_key_dict:
@@ -135,7 +135,7 @@ def build_bib(mode='normal'):
 
     arxiv = pd.read_csv('arxiv.txt', sep='$')
     for i in range(arxiv.shape[0]):
-        print i
+        print(i)
         
         ref_key = build_ref_key(arxiv.loc[i])
         if ref_key in ref_key_dict:
@@ -168,7 +168,7 @@ def build_bib(mode='normal'):
 
     book = pd.read_csv('book.txt', sep='$')
     for i in range(book.shape[0]):
-        print i
+        print(i)
 
         ref_key = build_ref_key(book.loc[i])
         if ref_key in ref_key_dict:
@@ -201,7 +201,7 @@ def build_bib(mode='normal'):
     website = pd.read_csv('website.txt', sep='$')
     for i in range(website.shape[0]):
         
-        print i
+        print(i)
         ref_key = website.loc[i, 'key']
         
         f = open(mode+'_generated.bib', 'a')
@@ -211,7 +211,7 @@ def build_bib(mode='normal'):
         
 #        f.write("title = {"+website.loc[i, 'title']+"},")
 #        f.write('\n')
-        f.write("howpublished = {\url{"+website.loc[i, 'url']+"}},")
+        f.write(r"howpublished = {\url{" + website.loc[i, 'url']+"}},")
         f.write('\n')
 #        f.write("note = {}")
 #        f.write('\n')
