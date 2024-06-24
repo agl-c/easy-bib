@@ -63,7 +63,7 @@ def build_bib(mode='normal'):
         f.write('\n')
 
         if type(conference.loc[i, 'pages'])!=float:
-            f.write("pages = {"+conference.loc[i, 'pages']+"},")
+            f.write("pages = {"+ str(conference.loc[i, 'pages']) +"},")
             f.write('\n')
         if mode == 'normal':
             # publisher        
@@ -109,21 +109,21 @@ def build_bib(mode='normal'):
         proceedings = venue_fullname.loc[venue_fullname.venue==venue, 'fullname'].values[0]
         f.write("journal = {{"+proceedings+"}},")
         f.write('\n')
-#        # volume
-#        if type(journal.loc[i, 'volume'])!=float:
-#            f.write("volume = {"+str(journal.loc[i, 'volume'])+"},")
-#            f.write('\n')
-#        # number
-#        if type(journal.loc[i, 'number'])!=float:
-#            f.write("number = {"+str(journal.loc[i, 'number'])+"},")
-#            f.write('\n')
-#        # pages            
-#        if type(journal.loc[i, 'pages'])!=float:
-#            f.write("pages = {"+journal.loc[i, 'pages']+"},")
-#            f.write('\n')
+        # volume
+        if type(journal.loc[i, 'volume'])!=float:
+            f.write("volume = {"+str(journal.loc[i, 'volume'])+"},")
+            f.write('\n')
+        # number
+        if type(journal.loc[i, 'number'])!=float:
+            f.write("number = {"+str(journal.loc[i, 'number'])+"},")
+            f.write('\n')
+        # pages            
+        if type(journal.loc[i, 'pages'])!=float:
+            f.write("pages = {"+ str(journal.loc[i, 'pages']) +"},")
+            f.write('\n')
         # publisher
         if type(journal.loc[i, 'publisher'])!=float:
-            f.write("publisher = {"+journal.loc[i, 'publisher']+"},")
+            f.write("publisher = {"+ str(journal.loc[i, 'publisher'])+"},")
             f.write('\n')
         # year
         f.write("year = {"+str(journal.loc[i, 'year'])+"}")

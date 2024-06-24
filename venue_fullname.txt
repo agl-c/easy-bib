@@ -1,5 +1,7 @@
 venue$fullname
 ICST$IEEE Communications Surveys \& Tutorials
+ICSTVV$International Conference on Software Testing, Validation and Verification
+ESE$Empirical Software Engineering
 COS$Computers \& Security
 COSN$ACM Conference on Online Social Networks
 WI$International Conference on Web Intelligence
